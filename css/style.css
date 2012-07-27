@@ -72,22 +72,31 @@ td { vertical-align: top; }
    Author: Fernando Martínez oinak.com
    ========================================================================== */
 
-@import url(http://fonts.googleapis.com/css?family=Lora|Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,500,300italic,500italic|Droid+Serif:400,700,400italic,700italic);
 html{font-size: 100%;}
-body{padding: 0px 10% 0px;}
-body{font-family: georgia, serif; font-size:18px }
-nav{font-family: 'Open Sans', sans-serif;font-size:small;text-align:center}
-h1,h2,h3{ font-family: 'Lora', georgia, times, serif; font-style:italic}
-dt{ font-family: 'Lora', georgia, times, serif; font-style:italic; font-weight: 400}
-a{color: FireBrick;text-decoration: none;}
-a:hover{text-decoration: underline;}
-header{background: steelblue  url('http://rubyonrails.org.es/images/rails.png') no-repeat 10px 10px; border-radius: 8px 0px 8px 0px; color: white; 
-min-height: 112px; padding: 0px 110px 5px; text-align: center; text-shadow: 0px 1px 1px #333}
-header > h1{ text-shadow: 0px 1px 1px #000 }
-section#definiciones dl{}
-section#definiciones dl > dt{float: left; margin: 0px; padding: 0px 1em 0px 10px; text-align: right; width:25%;}
-section#definiciones dl > dd{  padding: 0px 0px 10px;  margin: 0px;  width: 70%;  float:left;}
-footer{background-color: white;bottom:0px;font-family: 'Open Sans',sans-serif;font-size: small;left:0px;padding:5px 0px;position:absolute;text-align:center;width:100%;}
+body{padding: 0px;}
+body{font-family: 'Ubuntu', 'Open Sans', Helvetica, sans-serif; font-weight: 300; font-size: 18px }
+em{ font-family: 'Droid Serif', georgia, times, serif; font-weight: 400; font-style: italic;}
+h1{font-size: 130%}
+h2{font-size: 115%}
+h3{font-size: 100%}
+nav{ background: url('../img/topbluefade.gif'); text-align: center; height:50px; font-weight: 500}
+h1,h2,h3{ font-family: 'Droid Serif', georgia, times, serif; font-style: italic; }
+dt{ font-family: 'Droid Serif', georgia, times, serif; font-style: italic; font-size: 120%; font-weight: 400}
+a, a:visited{color: FireBrick;text-decoration: none;font-weight: 500}
+a:hover{color:white; background-color: firebrick}
+header{min-height: 132px; padding: 10px 10%; text-align: center; /*text-shadow: 0px 1px 1px #333*/}
+header > img#logo { float: left; margin: 5px }
+header > h1{ /*text-shadow: 0px 1px 1px #000*/ }
+section#definiciones { margin: auto; width: 960px}
+section#definiciones dl > dt{float: left; margin: 0px; padding: 0px 1em 0px 20px; text-align: right; width:25%;}
+section#definiciones dl > dd{  padding: 0px 0px 20px;  margin: 0px;  width: 70%;  float:left;}
+section#definiciones dl > dd li{ font-size:90%; margin-bottom: 1em;  }
+section#definiciones dl > dd li p{ float:left; font-size:90%; margin-bottom: 1em;  }
+section#definiciones dl > dd li img{  }
+footer{background-color: white;bottom:0px;font-family: 'Open Sans',sans-serif;font-size: small;left:0px;padding:5px 0px;position:fixed;text-align:center;width:100%;}
+a.libro{ display: inline-block }
+a.libro img{ margin: auto 1em; outline: 1px solid lightgray }
 /* =============================================================================
    Media Queries
    ========================================================================== */
