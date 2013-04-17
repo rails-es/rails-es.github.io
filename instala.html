@@ -1,0 +1,169 @@
+---
+layout: default
+title: ¿Cómo instalar Ruby on Rails?
+---
+<header>
+  <img id='logo' src="img/rails_logo.png" alt="Rails Logo" title="Logotipo de Rails" />
+  <h2>¿Cómo instalar con <em>Ruby on Rails</em>?</h2>
+  <p>¿Qué pasos hay que seguir para instalar Rails?</p>
+</header>
+<section id="instalacion">
+
+<h3>GNU/Linux</h3>
+<p>
+Linux es un entorno habitual para servidores, con lo que muchos desarrolladores lo escogen minimizando
+así las diferencias entre el entorno de desarrollo y el de producción.
+</p>
+<p><b>RVM</b>
+<br>
+Evita administrar Ruby, RubyGems y demás con el gestor de paquetes de tu distribución ya que estos suelen
+estar desactualizados. En su lugar, puedes emplear "RVM".
+<br>
+RVM te permite instalar y mantener varias versiones de ruby a la vez. Puedes encontrar más información 
+sobre Ruby Version Mananger (RVM) en <a href="http://rvm.io">http://rvm.io</a>
+</p>
+<p>
+<b>Prerequisitos de RVM:</b>
+<br>
+<p>
+<pre>
+sudo apt-get install build-essential openssl libreadline6 libreadline6-dev curl git-core zlib1g
+zlib1g-dev libssl-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf 
+libc6-dev ncurses-dev automake libtool bison subversion pkg-config
+</pre>
+</p>
+<p><b>Instala RVM:</b>
+<br>
+<pre>
+\curl -L https://get.rvm.io | bash -s stable  --autolibs=enabled
+source /home/fer/.rvm/scripts/rvm
+</pre>
+</p>
+<p><b>Instala ruby 1.9.3</b>
+<br>
+<pre>rvm install ruby-1.9.3</pre>
+</p>
+<p><b>Comprueba los comandos: rvm, ruby, irb, gem</b><br>
+<pre>
+$ rvm list
+
+rvm rubies
+
+=* ruby-1.9.3-p392 [ i686 ]
+
+# =&gt; - current
+# =* - current &amp;&amp; default
+#  * - default
+
+$ gem -v
+1.8.25
+$ ruby -v
+ruby 1.9.3p392 (2013-02-22 revision 39386) [i686-linux]
+$ gem -v
+1.8.25
+$ irb
+1.9.3-p392 :001 &gt; puts 'Hola'
+Hola
+ =&gt; nil 
+1.9.3-p392 :002 &gt; quit
+      </pre>
+</p>
+<h3>OSX</h3>
+<p>
+Mac OS es una plataforma muy popular entre desarrolladores Rails. 
+Para configurar el entorno de desarrollo necesitarás los siguientes componentes:
+</p>
+<p>
+<b>Command Line Tools for XCode</b>
+<br>
+<ul>
+  <li>Crea un <a href="https://developer.apple.com/programs/register/">Apple ID</a> accede con el tuyo si ya lo tienes.</li>
+</ul>
+Registrate con la misma ID que usas para otros servicios de Apple como iTunes, iCloud, etc&hellip;
+<ul>
+  <li>Accede al Apple Developer Portal</EM></li>
+<li>Busca "Command Line Tools (OS X Lion) for Xcode" o "Command Line Tools (OS X Mountain Lion) for Xcode" </li>
+<li>Descarga e instala el paquete</li>
+</ul>
+</p>
+<p>
+<b>Homebrew</b>
+<br>
+Homebrew es un sistema de gestión de paquetes que hace muy fácil instalar centenares de proyectos de
+fuente abierta y compilarlos desde las fuentes para optimizar su rendimiento en tu máquina.
+
+Homebrew is a package management system that makes it super easy to install hundreds of open source projects and compile them from source for maximum performance on your machine.
+
+<pre>
+$ ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
+==> This script will install:
+/usr/local/bin/brew
+/usr/local/Library/...
+/usr/local/share/man/man1/brew.1
+Press ENTER to continue or any other key to abort
+</pre>
+</p>
+<p>
+<b>Git</b>
+<br>
+Git es el sistema de control de versiones más popular en la comunidad Ruby.
+
+<pre>
+$ brew install git
+==> Downloading http://git-core.googlecode.com/files/git-1.8.1.1.tar.gz
+########################################################### 100.0%
+</pre>
+</p>
+<p>
+<b>RVM</b>
+<br>
+RVM te permite instalar y mantener varias versiones de ruby a la vez. Puedes encontrar más información sobre Ruby Version Mananger (RVM) en <a href="http://rvm.io">http://rvm.io</a>
+<pre>
+$ bash -s stable < <(curl -L https://get.rvm.io )
+source ~/.bash_profile
+</pre>
+<pre>
+$ rvm install 1.9.3 --with-gcc=clang
+Searching for binary rubies, this might take some time.
+No binary rubies available for: osx/10.8/x86_64/ruby-1.9.3-p374.
+Continuing with compilation. Please read 'rvm mount' to get more information on binary rubies.
+Installing Ruby from source to: /Users/burtlo/.rvm/rubies/ruby-1.9.3-p374, this may take a while depending on your cpu(s)...
+ruby-1.9.3-p374 - #downloading ruby-1.9.3-p374, this may take a while depending on your connection...
+######################################################################## 100.0%
+</pre>
+<pre>
+rvm use 1.9.3 --default
+</pre>
+  </p>
+  <h3>Microsoft Windows</h3>
+  <p>
+      Iniciarse en Rails sobre Windows es relativamente fácil gracias a los esfuerzos de Engine Yard 
+      (<a href="http://engineyard.com">http://engineyard.com</a>) que han desarrollado <i>RailsInstaller</i>
+      (<a href="http://railsinstaller.org/">http://railsinstaller.org/</a>), un instalador en un sólo paquete
+      de todas las herramientas que necesitas para ponerte a trabajar.
+  </p>
+
+  <p>
+    Asegurate de que durante la configuración seleccionas la casilla correspondiente a las variables de entorno.
+    Puedes detenerte tras el paso 2 después de haber introducido tu nombre y correo electrónico.
+  </p>
+
+  <p>
+    Más allá de la instalación, sin embargo to empieza a complicarse. Según vayas utilizando más Gemas
+    (que es como se llama en Ruby a las librerías) y otras dependencias descubrirás que muchas utilizan
+    <i>extensiones nativas</i> escritas en Lenguaje C para mayor rendimiento, y salvo que los autores de esas 
+    gemas hayan puesto un especial empeño en ser multiplataforma desencadenarán complicaciones.
+  </p>
+
+  <p>
+    <i>
+      Si hay alguna posibilidad de que evites tener que usar Windows como entorno de desarrllo, hazlo.
+      Como alternativa, considera configurar una máquina virtual con Virtual Box 
+      (<a href="http://www.virtualbox.org/">http://www.virtualbox.org/</a>) y utiliza Ubuntu Linux
+      (<a href="http://www.ubuntu.com/download/ubuntu/download">http://www.ubuntu.com/download/ubuntu/download</a>)
+      en su lugar.
+    </i>
+  </p>
+
+</section>
+<br>
