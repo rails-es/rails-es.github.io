@@ -95,7 +95,7 @@ dt{ font-family: 'Droid Serif', georgia, times, serif; font-style: italic; font-
 a, a:visited{color: FireBrick;text-decoration: none; font-family: 'Open Sans', sans-serif; font-weight: bold;}
 a:hover{color:white; background-color: firebrick}
 header{min-height: 132px; padding: 10px 10%; text-align: center; /*text-shadow: 0px 1px 1px #333*/}
-header > img#logo { float: left; margin: 15px }
+header img#logo { float: left; margin: 15px }
 header > h1{ /*text-shadow: 0px 1px 1px #000*/ }
 header > p { text-align: center; }
 section#definiciones { margin: auto; width: 960px}
