@@ -3,12 +3,16 @@ layout: default
 title: ¿Cómo instalar Ruby on Rails?
 ---
 <header>
+  <a href="index.html" alt="Inicio" title="Descubre ruby on Rails">
   <img id='logo' src="img/rails_logo.png" alt="Rails Logo" title="Logotipo de Rails" />
+  </a>
   <h2>¿Cómo instalar con <em>Ruby on Rails</em>?</h2>
   <p>¿Qué pasos hay que seguir para instalar Rails?</p>
 </header>
 <section id="instalacion">
 
+  <p>En general, instalar Rails es tan sencillo como <tt>gem install rails</tt>, pero primero hay que tener
+  el lenguaje <i>Ruby</i> y el gestor de librerías <i>Rubygems</i> en el sistema, lo que varía un poco de una plataforma a otra:</p>
   <h3>GNU/Linux</h3>
   <p>
   Linux es un entorno habitual para servidores, con lo que muchos desarrolladores lo escogen minimizando
@@ -70,6 +74,7 @@ title: ¿Cómo instalar Ruby on Rails?
     Hola
      =&gt; nil
     1.9.3-p392 :002 &gt; quit
+    $ gem install rails
     </pre>
   </p>
   <h3>OSX</h3>
@@ -98,8 +103,6 @@ title: ¿Cómo instalar Ruby on Rails?
     <br>
     Homebrew es un sistema de gestión de paquetes que hace muy fácil instalar centenares de proyectos de
     fuente abierta y compilarlos desde las fuentes para optimizar su rendimiento en tu máquina.
-
-    Homebrew is a package management system that makes it super easy to install hundreds of open source projects and compile them from source for maximum performance on your machine.
 
     <pre>
     $ ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
@@ -140,6 +143,7 @@ title: ¿Cómo instalar Ruby on Rails?
     </pre>
     <pre>
       rvm use 1.9.3 --default
+      $ gem install rails
     </pre>
   </p>
 
@@ -148,21 +152,21 @@ title: ¿Cómo instalar Ruby on Rails?
     Iniciarse en Rails sobre Windows es relativamente fácil gracias a los esfuerzos de Engine Yard 
     (<a href="http://engineyard.com">http://engineyard.com</a>) que han desarrollado <i>RailsInstaller</i>
     (<a href="http://railsinstaller.org/">http://railsinstaller.org/</a>), un instalador en un sólo paquete
-    de todas las herramientas que necesitas para ponerte a trabajar.
+    de todas las herramientas que necesitas para ponerte a trabajar, incluido Rails.
   </p>
   <p>
     Asegurate de que durante la configuración seleccionas la casilla correspondiente a las variables de entorno.
     Puedes detenerte tras el paso 2 después de haber introducido tu nombre y correo electrónico.
   </p>
   <p>
-    Más allá de la instalación, sin embargo to empieza a complicarse. Según vayas utilizando más Gemas
+    Más allá de la instalación, sin embargo todo empieza a complicarse. Según vayas utilizando más Gemas
     (que es como se llama en Ruby a las librerías) y otras dependencias descubrirás que muchas utilizan
     <i>extensiones nativas</i> escritas en Lenguaje C para mayor rendimiento, y salvo que los autores de esas 
     gemas hayan puesto un especial empeño en ser multiplataforma desencadenarán complicaciones.
   </p>
   <p>
     <i>
-      Si hay alguna posibilidad de que evites tener que usar Windows como entorno de desarrllo, hazlo.
+      Si hay alguna posibilidad de que evites tener que usar Windows como entorno de desarrollo, hazlo.
       Como alternativa, considera configurar una máquina virtual con Virtual Box 
       (<a href="http://www.virtualbox.org/">http://www.virtualbox.org/</a>) y utiliza Ubuntu Linux
       (<a href="http://www.ubuntu.com/download/ubuntu/download">http://www.ubuntu.com/download/ubuntu/download</a>)
