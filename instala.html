@@ -32,9 +32,11 @@ title: ¿Cómo instalar Ruby on Rails?
     <br>
     <pre>
     sudo apt-get install build-essential openssl libreadline6 libreadline6-dev curl git-core zlib1g
-    zlib1g-dev libssl-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf 
+    zlib1g-dev libssl-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf
     libc6-dev ncurses-dev automake libtool bison subversion pkg-config
     </pre>
+    Este comando puede variar entre versiones y distribuciones, está probado en Ubuntu 13.04, consulta la
+    documentación de la <a href='https://rvm.io/rvm/prerequisites'>web de RVM</a> y de tu distribución.
   </p>
   <p>
     <b>Instala RVM:</b>
@@ -45,9 +47,9 @@ title: ¿Cómo instalar Ruby on Rails?
     </pre>
   </p>
   <p>
-    <b>Instala ruby 1.9.3</b>
+    <b>Instala ruby</b>
     <br>
-    <pre>rvm install ruby-1.9.3</pre>
+    <pre>rvm install ruby-2.0.0</pre>
   </p>
   <p>
     <b>Comprueba los comandos: rvm, ruby, irb, gem</b>
@@ -57,29 +59,29 @@ title: ¿Cómo instalar Ruby on Rails?
 
     rvm rubies
 
-    =* ruby-1.9.3-p392 [ i686 ]
+    =* ruby-2.0.0-p247 [ x86_64 ]
 
     # =&gt; - current
     # =* - current &amp;&amp; default
     #  * - default
 
     $ gem -v
-    1.8.25
+    2.0.3
     $ ruby -v
-    ruby 1.9.3p392 (2013-02-22 revision 39386) [i686-linux]
-    $ gem -v
-    1.8.25
+    ruby 2.0.0p247 (2013-06-27 revision 41674) [x86_64-linux]
     $ irb
-    1.9.3-p392 :001 &gt; puts 'Hola'
+    2.0.0-p247 :001 &gt; puts 'Hola'
     Hola
      =&gt; nil
-    1.9.3-p392 :002 &gt; quit
+    2.0.0-p247 :002 &gt; quit
     $ gem install rails
     </pre>
+    Para instalar una versión concreta de Rails, en lugar del último comando podemos poner:
+    <pre>gem install rails -v=4.0</pre>
   </p>
   <h3>OSX</h3>
   <p>
-    Mac OS es una plataforma muy popular entre desarrolladores Rails. 
+    Mac OS es una plataforma muy popular entre desarrolladores Rails.
     Para configurar el entorno de desarrollo necesitarás los siguientes componentes:
   </p>
   <p>
@@ -173,5 +175,24 @@ title: ¿Cómo instalar Ruby on Rails?
       en su lugar.
     </i>
   </p>
+
+  <h3>Una alternativa: desarrollo en un entorno alojado</h3>
+  <p>
+    Puedes usar Ruby on Rails sin instalarlo realmente en tu ordenador.
+    El desarrollo alojado usando un servicio como <a href='http://n2o.io'>Nitrous.io</a> (o cualquier otro similar,
+    que no nos llevamos comisión) significa que obtienes un ordenador «en la nube» que utilizas desde tu navegador
+    web o a traves de <i>ssh</i>.
+  </p>
+  <p>
+    Cualquier ordenador puede acceder a un entorno alojado pero es recomendable tener una conexión de banda ancha.
+    Nitrous.io es gratuito para entornos de poca potencia.
+  </p>
+
+  <p>
+    Si cualquiera de estos pasos te fallara o detectas que se ha quedado desactualizado, no dudes en abrirnos
+    un issue en
+    <a href='https://github.com/aprodeweb/rubyonrails.org.es/issues/new'>https://github.com/aprodeweb/rubyonrails.org.es/issues/new</a>
+  </p>
 </section>
+
 <br>
