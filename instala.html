@@ -64,7 +64,6 @@ title: ¿Cómo instalar Ruby on Rails?
   </p>
   <br>
 
-
   <p>
     <b>Instalación de RVM paso a paso</b>
     <br>
@@ -150,7 +149,6 @@ title: ¿Cómo instalar Ruby on Rails?
   </p>
   <br>
 
-
   <p>
     <b>Instala Rails</b>
     <br>
@@ -168,10 +166,8 @@ title: ¿Cómo instalar Ruby on Rails?
   </p>
   <br>
 
-
-
   <p>
-    <b>Comprobar configuración</b>
+    <b>Comprueba la configuración</b>
     <br>
     <pre>
       type rvm | head -n -1
@@ -187,9 +183,6 @@ title: ¿Cómo instalar Ruby on Rails?
 
 <br><br>
   
-
-
-
 
   <h3>OSX</h3>
   <p>
@@ -212,12 +205,13 @@ title: ¿Cómo instalar Ruby on Rails?
       <li>Descarga e instala el paquete</li>
     </ul>
   </p>
+  <br>
   <p>
     <b>Homebrew</b>
     <br>
     Homebrew es un sistema de gestión de paquetes que hace muy fácil instalar centenares de proyectos de
     fuente abierta y compilarlos desde las fuentes para optimizar su rendimiento en tu máquina.
-
+    
     <pre>
     $ ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
     ==&gt; This script will install:
@@ -227,6 +221,7 @@ title: ¿Cómo instalar Ruby on Rails?
     Press ENTER to continue or any other key to abort
     </pre>
   </p>
+  <br>
   <p>
     <b>Git</b>
     <br>
@@ -237,6 +232,7 @@ title: ¿Cómo instalar Ruby on Rails?
     ########################################################### 100.0%
     </pre>
   </p>
+  <br>
   <p>
     <b>RVM</b>
     <br>
@@ -260,6 +256,7 @@ title: ¿Cómo instalar Ruby on Rails?
       $ gem install rails
     </pre>
   </p>
+  <br>
 
   <h3>Microsoft Windows</h3>
   <p>
@@ -269,11 +266,53 @@ title: ¿Cómo instalar Ruby on Rails?
     de todas las herramientas que necesitas para ponerte a trabajar, incluido Rails.
   </p>
   <p>
-    Asegurate de que durante la configuración seleccionas la casilla correspondiente a las variables de entorno.
-    Puedes detenerte tras el paso 2 después de haber introducido tu nombre y correo electrónico.
+    Asegúrate de que durante la instalación seleccionas la casilla correspondiente a las variables de entorno (Add executables for Ruby, DevKit and Git to the PATH), aunque por defecto aparece seleccionada junto a la casilla Install Git (recommended)
   </p>
   <p>
-    Más allá de la instalación, sin embargo todo empieza a complicarse. Según vayas utilizando más Gemas
+    Más allá de la instalación, sin embargo todo empieza a complicarse. Es posible que en la versión del instalador el paquete rubygems-update esté desactualizado. Después de crear nuestra aplicación con "rails new myapp", al tratar de ejecutar bundle install nos dará un error. Para solucionarlo debemos instalar manualmente la última versión de la gema disponible en (<a href="https://rubygems.org/pages/download">https://rubygems.org/pages/download</a>). Los pasos podrían ser los siguientes:
+    <br>
+    <br>
+    <p>
+      <b>Comprueba la versión actual de la gema</b>
+      <br>
+      <pre>
+        C:\>gem --version
+      </pre>
+      </p>
+    <br>
+    <p>
+      <b>Instala y ejecuta la gema que has descargado anteriormente</b>
+      <br>
+      <pre>
+        C:\>gem install --local C:\rubygems-update-2.4.6.gem
+        C:\>update_rubygems --no-ri --no-rdoc
+      </pre>
+        Para instalarla nos situamos en el directorio donde se encuentre la gema que nos hemos descargado. Por ejemplo C:\ .
+        Es posible que se nos solicite el permiso de administrador el realizar esta operación. Al ejecutar de nuevo el comando 
+        gem --version nos debe aparecer una versión actualizada.
+      </p>
+    <br>
+
+    <p>
+      <b>Desinstalamos rubygems-update</b>
+      <br>
+      <pre>
+        C:\>gem uninstall rubygems-update -x
+      </pre>      
+      </p>
+    <br>
+    
+    <p>
+      <b>Ejecutamos bundle install</b>
+      <br>
+      <pre>
+        C:\>cd myapp
+        C:\myapp>bundle install
+      </pre>
+       Bundle es una gema de ruby que lleva la cuenta e instala las diferentes versiones de las gemas que necesitamos. Ya tenemos el entorno instalado y disponible para trabajar con él.      
+      </p>
+    <br>    
+    Según vayas utilizando más Gemas
     (que es como se llama en Ruby a las librerías) y otras dependencias descubrirás que muchas utilizan
     <i>extensiones nativas</i> escritas en Lenguaje C para mayor rendimiento, y salvo que los autores de esas 
     gemas hayan puesto un especial empeño en ser multiplataforma desencadenarán complicaciones.
@@ -287,6 +326,7 @@ title: ¿Cómo instalar Ruby on Rails?
       en su lugar.
     </i>
   </p>
+  <br>
 
   <h3>Una alternativa: desarrollo en un entorno alojado</h3>
   <p>
