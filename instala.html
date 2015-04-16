@@ -27,30 +27,101 @@ title: ¿Cómo instalar Ruby on Rails?
     RVM te permite instalar y mantener varias versiones de ruby a la vez. Puedes encontrar más información 
     sobre Ruby Version Mananger (RVM) en <a href="http://rvm.io">http://rvm.io</a>
   </p>
+  <br>
   <p>
-    <b>Prerequisitos de RVM:</b>
+    <b>Prerrequisitos de RVM:</b>
     <br>
     <pre>
     sudo apt-get install build-essential openssl libreadline6 libreadline6-dev curl git-core zlib1g
     zlib1g-dev libssl-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf
     libc6-dev ncurses-dev automake libtool bison subversion pkg-config
     </pre>
-    Este comando puede variar entre versiones y distribuciones, está probado en Ubuntu 13.04, consulta la
+    Este comando puede variar entre versiones y distribuciones, está probado en Ubuntu 14.04 consulta la
     documentación de la <a href='https://rvm.io/rvm/prerequisites'>web de RVM</a> y de tu distribución.
   </p>
+  <br>
+
   <p>
-    <b>Instala RVM:</b>
+  <b>Instalación de la firma</b>
+  <br>
+  <pre>
+    command curl -sSL https://rvm.io/mpapis.asc | gpg --import 
+  </pre>
+    El RVM a partir de la versión 1.26 introduce versiones firmadas y comprobación automática de las mismas. Para ello necesitamos instalar dicha firma. En caso contrario podría darnos problemas al instalar RVM.
+  </p>
+  <br>
+  
+  <p>
+  <b>Instalación rápida de RVM</b>
+  <br>
+    <pre>
+      \curl -sSL https://get.rvm.io | bash -s stable --rails --ruby 
+    </pre>
+    Este comando instala las últimas versiones estables de rvm, ruby y rails. Ejecutaremos este comando después de instalar la firma. Comprobamos que la instalación se ha realizado correctamente probando los comandos rvm, irb o rails.
+    <br>
+    Se recomienda realizar la instalación paso a paso para entender mejor el proceso y llevar un mejor control de lo instalado.
+
+  </p>
+  <br>
+
+  <p>
+    <b>Instalación de RVM paso a paso</b>
     <br>
     <pre>
-    \curl -L https://get.rvm.io | bash -s stable  --autolibs=enabled
+    \curl -L https://get.rvm.io | bash -s stable 
+    </pre>
+  </p>
+  <br>
+  <p>
+    <b>Ejecuta RVM:</b>
+    <br>
+    <pre>
     source $HOME/.rvm/scripts/rvm
     </pre>
   </p>
+  <br>
   <p>
-    <b>Instala ruby</b>
+    <b>Comprueba las versiones disponibles de Ruby:</b>
     <br>
-    <pre>rvm install ruby-2.0.0</pre>
+    <pre>
+    rvm list known
+    </pre>
   </p>
+  <p>
+    Si nos fijamos en la sección MRI Rubies vemos las versiones disponibles
+    <pre>
+    # MRI Rubies
+    [ruby-]1.8.6[-p420]
+    [ruby-]1.8.7[-head] # security released on head
+    [ruby-]1.9.1[-p431]
+    [ruby-]1.9.2[-p330]
+    [ruby-]1.9.3[-p551]
+    [ruby-]2.0.0[-p643]
+    [ruby-]2.1.4
+    [ruby-]2.1[.5]
+    [ruby-]2.2[.1]
+    [ruby-]2.2-head
+    ruby-head
+    </pre>
+  </p>
+  <br>
+  <p>
+    <b>Elige la versión de Ruby a instalar:</b>
+    <br>
+    <pre>
+    rvm install ruby-2.2.1
+    </pre>
+  </p>
+  <p>
+    <b>ó</b>
+    <br>
+    <pre>
+    rvm install ruby-2.2
+    </pre>
+    Este comando instalará la última versión de ruby dentro de la 2.2
+  </p>
+  <br>
+
   <p>
     <b>Comprueba los comandos: rvm, ruby, irb, gem</b>
     <br>
@@ -59,26 +130,60 @@ title: ¿Cómo instalar Ruby on Rails?
 
     rvm rubies
 
-    =* ruby-2.0.0-p247 [ x86_64 ]
+    =* ruby-2.2.1-p85 [ x86_64 ]
 
     # =&gt; - current
     # =* - current &amp;&amp; default
     #  * - default
 
     $ gem -v
-    2.0.3
+    2.4.6
     $ ruby -v
-    ruby 2.0.0p247 (2013-06-27 revision 41674) [x86_64-linux]
+    ruby 2.2.1p85 (2015-02-26 revision 49769) [x86_64-linux]
     $ irb
-    2.0.0-p247 :001 &gt; puts 'Hola'
+    2.2.1 :001 &gt; puts 'Hola'
     Hola
      =&gt; nil
-    2.0.0-p247 :002 &gt; quit
-    $ gem install rails
+    2.2.1 :002 &gt; quit
     </pre>
-    Para instalar una versión concreta de Rails, en lugar del último comando podemos poner:
-    <pre>gem install rails -v=4.0</pre>
   </p>
+  <br>
+
+  <p>
+    <b>Instala Rails</b>
+    <br>
+    <pre>
+      gem install rails
+    </pre>
+  </p>
+  <p>
+    <b>ó</b>
+    <br>
+    <pre>
+      gem install rails -v=4.2.1
+    </pre>
+    Este comando instala una versión concreta de Rails
+  </p>
+  <br>
+
+  <p>
+    <b>Comprueba la configuración</b>
+    <br>
+    <pre>
+      type rvm | head -n -1
+    </pre>
+    Comprueba que RVM esté configurado correctamente. Si al ejecutar el comando no nos aparece "rvm is a function" es que rvm no está configurado adecuadamente.<br>
+    Una posible solución es ir a la pestaña <b>Editar/Preferencias del perfil/Título y comando</b> de la consola y asegúrate de que está marcada la opción “Ejecutar el comando como un intérprete de conexión”.
+  </p>
+  <br>
+
+<div id="captura">
+  <img title="capturaComando" src="img/captura1.png">
+</div>
+
+<br><br>
+  
+
   <h3>OSX</h3>
   <p>
     Mac OS es una plataforma muy popular entre desarrolladores Rails.
@@ -100,6 +205,7 @@ title: ¿Cómo instalar Ruby on Rails?
       <li>Descarga e instala el paquete</li>
     </ul>
   </p>
+  <br>
   <p>
     <b>Homebrew</b>
     <br>
@@ -115,6 +221,7 @@ title: ¿Cómo instalar Ruby on Rails?
     Press ENTER to continue or any other key to abort
     </pre>
   </p>
+  <br>
   <p>
     <b>Git</b>
     <br>
@@ -125,6 +232,7 @@ title: ¿Cómo instalar Ruby on Rails?
     ########################################################### 100.0%
     </pre>
   </p>
+  <br>
   <p>
     <b>RVM</b>
     <br>
@@ -148,6 +256,7 @@ title: ¿Cómo instalar Ruby on Rails?
       $ gem install rails
     </pre>
   </p>
+  <br>
 
   <h3>Microsoft Windows</h3>
   <p>
@@ -157,11 +266,53 @@ title: ¿Cómo instalar Ruby on Rails?
     de todas las herramientas que necesitas para ponerte a trabajar, incluido Rails.
   </p>
   <p>
-    Asegurate de que durante la configuración seleccionas la casilla correspondiente a las variables de entorno.
-    Puedes detenerte tras el paso 2 después de haber introducido tu nombre y correo electrónico.
+    Asegúrate de que durante la instalación seleccionas la casilla correspondiente a las variables de entorno (Add executables for Ruby, DevKit and Git to the PATH), aunque por defecto aparece seleccionada junto a la casilla Install Git (recommended)
   </p>
   <p>
-    Más allá de la instalación, sin embargo todo empieza a complicarse. Según vayas utilizando más Gemas
+    Más allá de la instalación, sin embargo todo empieza a complicarse. Es posible que en la versión del instalador el paquete rubygems-update esté desactualizado. Después de crear nuestra aplicación con "rails new myapp", al tratar de ejecutar bundle install nos dará un error. Para solucionarlo debemos instalar manualmente la última versión de la gema disponible en (<a href="https://rubygems.org/pages/download">https://rubygems.org/pages/download</a>). Los pasos podrían ser los siguientes:
+    <br>
+    <br>
+    <p>
+      <b>Comprueba la versión actual de la gema</b>
+      <br>
+      <pre>
+        C:\>gem --version
+      </pre>
+      </p>
+    <br>
+    <p>
+      <b>Instala y ejecuta la gema que has descargado anteriormente</b>
+      <br>
+      <pre>
+        C:\>gem install --local C:\rubygems-update-2.4.6.gem
+        C:\>update_rubygems --no-ri --no-rdoc
+      </pre>
+        Para instalarla nos situamos en el directorio donde se encuentre la gema que nos hemos descargado. Por ejemplo C:\ .
+        Es posible que se nos solicite el permiso de administrador el realizar esta operación. Al ejecutar de nuevo el comando 
+        gem --version nos debe aparecer una versión actualizada.
+      </p>
+    <br>
+
+    <p>
+      <b>Desinstalamos rubygems-update</b>
+      <br>
+      <pre>
+        C:\>gem uninstall rubygems-update -x
+      </pre>      
+      </p>
+    <br>
+
+    <p>
+      <b>Ejecutamos bundle install</b>
+      <br>
+      <pre>
+        C:\>cd myapp
+        C:\myapp>bundle install
+      </pre>
+       Bundle es una gema de ruby que lleva la cuenta e instala las diferentes versiones de las gemas que necesitamos. Ya tenemos el entorno instalado y disponible para trabajar con él.      
+      </p>
+    <br>    
+    Según vayas utilizando más Gemas
     (que es como se llama en Ruby a las librerías) y otras dependencias descubrirás que muchas utilizan
     <i>extensiones nativas</i> escritas en Lenguaje C para mayor rendimiento, y salvo que los autores de esas 
     gemas hayan puesto un especial empeño en ser multiplataforma desencadenarán complicaciones.
@@ -175,17 +326,17 @@ title: ¿Cómo instalar Ruby on Rails?
       en su lugar.
     </i>
   </p>
+  <br>
 
   <h3>Una alternativa: desarrollo en un entorno alojado</h3>
   <p>
     Puedes usar Ruby on Rails sin instalarlo realmente en tu ordenador.
-    El desarrollo alojado usando un servicio como <a href='http://n2o.io'>Nitrous.io</a> (o cualquier otro similar,
-    que no nos llevamos comisión) significa que obtienes un ordenador «en la nube» que utilizas desde tu navegador
-    web o a traves de <i>ssh</i>.
+    El desarrollo alojado usando un servicio como <a href='http://www.nitrous.io'>Nitrous</a> (o cualquier otro similar, como 
+    <a/ href="https://c9.io/">Cloud9 </a>ó<a href="https://www.digitalocean.com/"> Digital Ocean</a>, que no nos llevamos comisión) significa que obtienes un ordenador «en la nube» que utilizas desde tu navegador web o a traves de <i>ssh</i>.
   </p>
   <p>
     Cualquier ordenador puede acceder a un entorno alojado pero es recomendable tener una conexión de banda ancha.
-    Nitrous.io es gratuito para entornos de poca potencia.
+    Nitrous es gratuito para entornos de poca potencia.
   </p>
 
   <p>
@@ -195,4 +346,4 @@ title: ¿Cómo instalar Ruby on Rails?
   </p>
 </section>
 
-<br>
+
