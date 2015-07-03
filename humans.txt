@@ -3,14 +3,16 @@
 
 /* TEAM */
   Fernando Martínez (www.oinak.com)
+
+/* THANKS */
   Agregate aquí antes del pull request para que se te mencione al incorporarse
   tu aportación
 
-/* THANKS */
   Names (& URL):
   - WeArePeople - http://wearepeople.io (donated resources)
   - Darío Hereñú - https://github.com/kant (PR)
   - Raul Viera - https://github.com/daumier (PR)
+  - Rocío Fernandez Díaz-Meco - https://github.com/alia-del-crys (PR)
 
 /* SITE */
   Standards: HTML5, CSS3
