@@ -89,33 +89,75 @@ em{ font-family: 'Droid Serif', georgia, times, serif; font-weight: 400; font-st
 h1{font-size: 130%}
 h2{font-size: 120%; color: FireBrick; text-shadow: 0px 1px 0px #333}
 h3{font-size: 120%}
-nav{ background: url('../img/topbluefade.gif'); text-align: center; height:50px; font-weight: 500}
 h1,h2,h3{ font-family: 'Droid Serif', georgia, times, serif; font-style: italic; }
 dt{ font-family: 'Droid Serif', georgia, times, serif; font-style: italic; font-size: 120%; font-weight: 400}
 a, a:visited{color: FireBrick;text-decoration: none; font-weight: bold;}
 a:hover{color:white; background-color: firebrick}
-header{min-height: 132px; padding: 10px 10%; text-align: center; /*text-shadow: 0px 1px 1px #333*/}
-header img#logo { float: left; margin: 15px }
-header > h1{ /*text-shadow: 0px 1px 1px #000*/ }
-header > p { text-align: center; }
-section#definiciones { margin: auto; width: 960px}
-section#definiciones dl > dt{float: left; margin: 0px; padding: 0px 1em 0px 20px; text-align: right; width:25%;}
-section#definiciones dl > dd{  padding: 0px 0px 20px;  margin: 0px;  width: 70%;  float:left;}
-section#definiciones dl > dd li{ font-size:90%; margin-bottom: 1em;  }
-section#definiciones dl > dd li p{ float:left; font-size:90%; margin-bottom: 1em;  }
-section#definiciones dl > dd li img{  }
-section#instalacion { margin:auto; width: 960px}
 
-footer{background-color: white;
-        bottom:0px;
-        font-family: 'Open Sans',
-        sans-serif;
-        font-size: small;
-        left:0px;
-        padding:5px 0px;
-        position:fixed;
-        text-align:center;
-        width:100%}
+
+nav {
+  background: url('../img/topbluefade.gif') repeat-x;
+  text-align: center;
+  font-weight: 500;
+  width: 100%;
+}
+nav > .separator { visibility: hidden }
+nav > a { display: block; margin: auto; }
+
+@media only screen and (min-width: 32em) {
+  nav{ height:50px; }
+  nav > span, nav > a { display: inline }
+}
+
+  header{min-height: 132px; padding: 10px 10%; text-align: center; /*text-shadow: 0px 1px 1px #333*/}
+  header > a { width: 90%; margin: auto }
+  header img#logo { ; margin: 15px }
+  header > h1 > em { display: block }
+  header > h1{ /*text-shadow: 0px 1px 1px #000*/ }
+  header > p { text-align: center; }
+@media only screen and (min-width: 50em) {
+  header > a { }
+  header > h1 > em { display: inline }
+  header img#logo { float: left; margin: 15px }
+  header > h1{ /*text-shadow: 0px 1px 1px #000*/ }
+  header > p { text-align: center; }
+}
+
+section#definiciones { margin: auto; width: 90% }
+section#definiciones dl { padding: 1em; width:100%; }
+section#definiciones dl > dt{ margin-top: 1em; width: 90%; }
+section#definiciones dl > dd{ width: 90%; }
+
+@media only screen and (min-width: 50em) {
+  section#definiciones { margin: auto; width: 48em}
+  section#definiciones dl > dt{float: left; margin: 0px; padding: 0px 1em 0px 20px; text-align: right; width:25%;}
+  section#definiciones dl > dd{  padding: 0px 0px 20px;  margin: 0px;  width: 70%;  float:left;}
+  section#definiciones dl > dd li{ font-size:90%; margin-bottom: 1em;  }
+  section#definiciones dl > dd li p{ float:left; font-size:90%; margin-bottom: 1em;  }
+  section#definiciones dl > dd li img{  }
+}
+  section#instalacion { margin:auto; width: 960px}
+
+footer{
+  background-color: firebrick;
+  bottom: 0px;
+  border-top: 1px solid gray;
+  box-shadow: 0px -2px 8px #000;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: small;
+  left: 0px;
+  padding: 5px 0px;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+}
+footer > a, footer > a:visited {
+  color: white;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 a.libro{ display: inline-block }
 a.libro img{ margin: auto 1em; outline: 1px solid lightgray }
 p{text-align: justify}
