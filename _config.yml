@@ -10,3 +10,5 @@ highlighter: pygments
 
 source:      .
 destination: ./_site
+
+exclude: [vendor]

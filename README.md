@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/mmontalvo/rubyonrails.org.es.svg?branch=master)](https://travis-ci.org/mmontalvo/rubyonrails.org.es)
+
 rubyonrails.org.es
 ==================
 
