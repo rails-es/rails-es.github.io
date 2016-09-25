@@ -126,6 +126,42 @@ p.news{
   padding: .5em;
 }
 
+.banner{
+  background-color: #ffffcc;
+  padding: .5em;
+  /*border: 1px dashed firebrick;*/
+  border-width: 1px 0px 1px 0px;
+  text-align: center;
+	-webkit-animation: color_change 1s infinite alternate;
+	-moz-animation: color_change 1s infinite alternate;
+	-ms-animation: color_change 1s infinite alternate;
+	-o-animation: color_change 1s infinite alternate;
+	animation: color_change 1s infinite alternate;
+}
+
+@-webkit-keyframes color_change {
+	from { background-color: #fff; }
+	to { background-color: #ffffcc; }
+}
+@-moz-keyframes color_change {
+	from { background-color: #fff; }
+	to { background-color: #ffffcc; }
+}
+@-ms-keyframes color_change {
+	from { background-color: #fff; }
+	to { background-color: #ffffcc; }
+}
+@-o-keyframes color_change {
+	from { background-color: #fff; }
+	to { background-color: #ffffcc; }
+}
+@keyframes color_change {
+	from { background-color: #fff; }
+	to { background-color: #ffffcc; }
+}
+
+
+
 
 /* =============================================================================
    Media Queries
