@@ -6,7 +6,7 @@ url: http://localhost:4000
 safe: true
 source: git@github.com:aprodeweb/rubyonrails.org.es.git
 lsi: false
-highlighter: rogue
+highlighter: rouge
 
 source:      .
 destination: ./_site
