@@ -14,6 +14,7 @@
   - Raul Viera - https://github.com/daumier (PR)
   - Rocío Fernandez Díaz-Meco - https://github.com/ro-fdm (PR)
   - Miguel Montalvo - https://github.com/mmontalvo (PR)
+  - Miguel Martínez Serrano - https://github.com/miguelms95 (PR)
 
 /* SITE */
   Standards: HTML5, CSS3
