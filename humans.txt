@@ -9,7 +9,6 @@
   tu aportación
 
   Names (& URL):
-  - WeArePeople - http://wearepeople.io (donated resources)
   - Darío Hereñú - https://github.com/kant (PR)
   - Raul Viera - https://github.com/daumier (PR)
   - Rocío Fernandez Díaz-Meco - https://github.com/ro-fdm (PR)
