@@ -57,15 +57,38 @@ color: var(--color-primary);
   font-weight: 700;
 }
 
+body{
+  padding-bottom: 2em;
+}
+
+figure.book_cover {
+  width: 8em;
+  float: right;
+  clear: right;
+}
+figure img {
+  width: 100%;
+}
+
+dd {
+  margin-bottom: 1em;
+}
+
 footer {
-position: absolute;
-  bottom: 1em;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #F0E7E9;
+  color: var(--color-darkGrey);
+  padding: .5em;
+  text-align: center;
 }
 
 .banner {
-  padding: .5em;
-background-color: #F0E7E9;
+  padding: .25em;
+  background-color: #F0E7E9;
 }
-.banner a { 
-  color: var(--color-drakGrey);
+.banner a {
+  /*color: var(--color-darkGrey);*/
 }

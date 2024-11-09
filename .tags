@@ -18,7 +18,7 @@ $	js/libs/jquery-1.7.2.min.js	/^a){var b=F.exec(a);b&&(b[1]=(b[1]||"").toLowerCa
 .banner	assets/css/main.css	/^.banner {$/;"	c
 .banner	css/style.css	/^.banner{$/;"	c
 .banner a	_site/assets/css/main.css	/^.banner a { $/;"	s
-.banner a	assets/css/main.css	/^.banner a { $/;"	s
+.banner a	assets/css/main.css	/^.banner a {$/;"	s
 .chromeframe	_site/css/style.css	/^.chromeframe { margin: 0.2em 0; background: #ccc; color: black; padding: 0.2em 0; }$/;"	c
 .chromeframe	css/style.css	/^.chromeframe { margin: 0.2em 0; background: #ccc; color: black; padding: 0.2em 0; }$/;"	c
 .clearfix	_site/css/style.css	/^.clearfix { *zoom: 1; }$/;"	c
@@ -783,6 +783,7 @@ N	_site/js/libs/jquery-1.7.2.min.js	/^a){var b=F.exec(a);b&&(b[1]=(b[1]||"").toL
 N	js/libs/jquery-1.7.2.min.js	/^a){var b=F.exec(a);b&&(b[1]=(b[1]||"").toLowerCase(),b[3]=b[3]&&new RegExp("(?:^|\\\\s)"+b[3]+"(/;"	v
 O	_site/js/libs/jquery-1.7.2.min.js	/^a){var b=F.exec(a);b&&(b[1]=(b[1]||"").toLowerCase(),b[3]=b[3]&&new RegExp("(?:^|\\\\s)"+b[3]+"(/;"	v
 O	js/libs/jquery-1.7.2.min.js	/^a){var b=F.exec(a);b&&(b[1]=(b[1]||"").toLowerCase(),b[3]=b[3]&&new RegExp("(?:^|\\\\s)"+b[3]+"(/;"	v
+Optimizado para la Felicidad	index.html	/^    <h1 class="text-center">Optimizado para la Felicidad<\/h1>$/;"	h
 R	_site/js/libs/jquery-1.7.2.min.js	/^a){var b=F.exec(a);b&&(b[1]=(b[1]||"").toLowerCase(),b[3]=b[3]&&new RegExp("(?:^|\\\\s)"+b[3]+"(/;"	c
 R	js/libs/jquery-1.7.2.min.js	/^a){var b=F.exec(a);b&&(b[1]=(b[1]||"").toLowerCase(),b[3]=b[3]&&new RegExp("(?:^|\\\\s)"+b[3]+"(/;"	c
 S	_site/js/libs/jquery-1.7.2.min.js	/^(function(a,b){function cy(a){return f.isWindow(a)?a:a.nodeType===9?a.defaultView||a.parentWindo/;"	f
@@ -990,6 +991,7 @@ bo	js/libs/jquery-1.7.2.min.js	/^(function(a,b){function cy(a){return f.isWindow
 body	_site/css/style.css	/^body { margin: 0; font-size: 1em; line-height: 1.4; }$/;"	s
 body	_site/css/style.css	/^body{font-family: 'Open Sans', serif; font-weight: 300; font-size: 18px }$/;"	s
 body	_site/css/style.css	/^body{padding-bottom: 6em;}$/;"	s
+body	assets/css/main.css	/^body{$/;"	s
 body	css/style.css	/^body { margin: 0; font-size: 1em; line-height: 1.4; }$/;"	s
 body	css/style.css	/^body{font-family: 'Open Sans', serif; font-weight: 300; font-size: 18px }$/;"	s
 body	css/style.css	/^body{padding-bottom: 6em;}$/;"	s
@@ -1170,6 +1172,7 @@ d	js/libs/modernizr-2.5.3.min.js	/^;window.Modernizr=function(a,b,c){function D(
 d	js/libs/modernizr-2.5.3.min.js	/^;window.Modernizr=function(a,b,c){function D(a){j.cssText=a}function E(a,b){return D(n.join(a+";/;"	f	function:A
 d	js/libs/modernizr-2.5.3.min.js	/^;window.Modernizr=function(a,b,c){function D(a){j.cssText=a}function E(a,b){return D(n.join(a+";/;"	v
 dd	_site/css/style.css	/^dd { margin: 0 0 0 40px; }$/;"	s
+dd	assets/css/main.css	/^dd {$/;"	s
 dd	css/style.css	/^dd { margin: 0 0 0 40px; }$/;"	s
 delegateType	_site/js/libs/jquery-1.7.2.min.js	/^a){var b=F.exec(a);b&&(b[1]=(b[1]||"").toLowerCase(),b[3]=b[3]&&new RegExp("(?:^|\\\\s)"+b[3]+"(/;"	p	class:f.event.special
 delegateType	js/libs/jquery-1.7.2.min.js	/^a){var b=F.exec(a);b&&(b[1]=(b[1]||"").toLowerCase(),b[3]=b[3]&&new RegExp("(?:^|\\\\s)"+b[3]+"(/;"	p	class:f.event.special
@@ -1253,6 +1256,8 @@ figure	_site/css/style.css	/^article, aside, details, figcaption, figure, footer
 figure	_site/css/style.css	/^figure { margin: 0; }$/;"	s
 figure	css/style.css	/^article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: blo/;"	s
 figure	css/style.css	/^figure { margin: 0; }$/;"	s
+figure img	assets/css/main.css	/^figure img {$/;"	s
+figure.book_cover	assets/css/main.css	/^figure.book_cover {$/;"	c
 filter	_site/js/libs/jquery-1.7.2.min.js	/^a){var b=F.exec(a);b&&(b[1]=(b[1]||"").toLowerCase(),b[3]=b[3]&&new RegExp("(?:^|\\\\s)"+b[3]+"(/;"	f	function:m
 filter	js/libs/jquery-1.7.2.min.js	/^a){var b=F.exec(a);b&&(b[1]=(b[1]||"").toLowerCase(),b[3]=b[3]&&new RegExp("(?:^|\\\\s)"+b[3]+"(/;"	f	function:m
 filters	_site/js/libs/jquery-1.7.2.min.js	/^a){var b=F.exec(a);b&&(b[1]=(b[1]||"").toLowerCase(),b[3]=b[3]&&new RegExp("(?:^|\\\\s)"+b[3]+"(/;"	v

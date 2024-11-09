@@ -20,8 +20,12 @@
 
 title: Ruby on Rails
 email: fernando@rubyonrails.org.es
-description: >- # this means to ignore newlines until "baseurl:"
+description: |
   Esta es una página en Español sobre Ruby on Rails, mantenida por voluntarios.
+footer: |
+  Esta es una página en Español sobre Ruby on Rails, mantenida por voluntarios.
+  Puedes sugerir mejoras o correcciones en
+  <a href="https://github.com/rails-es/rails-es.github.io">el repositorio</a>
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "http://rubyonrails.org.es" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  oinak
